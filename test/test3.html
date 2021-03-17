@@ -7,12 +7,10 @@
   <META NAME="Author" CONTENT="">
   <META NAME="Keywords" CONTENT="">
   <META NAME="Description" CONTENT="">
+
+<script type="text/javascript" src="/test/aframe-master.min.js"></script>
+<script type="text/javascript" src='/test/aframe-ar-nft.js'></script>
  </HEAD>
-
-<!-- import aframe and then ar.js with image tracking / location based features -->
-<script src="../aframe-master.min.js"></script>
-
-<script src='../aframe-ar-nft.js'></script>
 
 <!-- style for the loader -->
 <style>
@@ -39,7 +37,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
   <div class="arjs-loader">
-    <div>Loading, please wait...</div>
+    <div>加载中...</div>
   </div>
 
   <!-- a-frame scene -->
@@ -49,7 +47,7 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-    <!-- 设置图像标记的路径,不用带后缀！ -->
+
     <a-nft
       type="nft"
       url="/dataNFT/haha"
@@ -58,7 +56,7 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
-        <!-- 设置要替换的模型 -->
+
         <a-entity
             gltf-model="/dataNFT/trex/scene.gltf"
             scale="5 5 5"
